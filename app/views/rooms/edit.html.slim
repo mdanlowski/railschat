@@ -1,0 +1,7 @@
+h1 
+  | Editing Chat Room: 
+  em #{@room.name}
+
+= simple_form_for @room do |form|
+  = form.input :name
+  = form.submit "Save", class: 'btn btn-success'

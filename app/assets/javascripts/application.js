@@ -12,7 +12,13 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require_tree .
+
+$(function() {
+  $('#new_room_message').on('ajax:success', function(a, b,c ) {
+    $(this).find('input[type="text"]').val('');
+  });
+});
